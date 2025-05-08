@@ -1,0 +1,28 @@
+name: Release PR (bump & changelog)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        with:
+          release-type: python
+          package-name: drydock
+          bump-minor-pre-major: true
+          pull-request-title-pattern: "chore: release ${version}"
+          changelog-types: |
+            [
+              {"type":"feat","section":"Features"},
+              {"type":"fix","section":"Bug Fixes"},
+              {"type":"chore","section":"Maintenance"},
+              {"type":"refactor","section":"Refactors"}
+            ]

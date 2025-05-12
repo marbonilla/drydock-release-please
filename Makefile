@@ -5,10 +5,18 @@ release: ## release a new version
 	@echo "This is a remote release, it will push to the remote repository."
 	semantic-release --strict version --changelog --push --tag --commit
 
+release-only:
+	@echo "Releasing: tag, changelog and publish, but no commits."
+	semantic-release publish --tag --changelog
+
 local-release:
 	@echo "Releasing a new version."
 	@echo "This is a local release, it will not push to the remote repository."
 	@echo "You can push the changes and release manually."
+	semantic-release version --changelog --commit --no-push
+
+bump:
+	@echo "Bumping version locally with changelog."
 	semantic-release version --changelog --commit --no-push
 
 selfcheck: ## check that the Makefile is well-formed

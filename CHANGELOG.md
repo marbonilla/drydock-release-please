@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## [19.2.1](https://github.com/marbonilla/drydock-release-please/compare/v19.2.0...v19.2.1) (2025-05-09)
+
+
+### Bug Fixes
+
+* change job input ([600d764](https://github.com/marbonilla/drydock-release-please/commit/600d7647ab9163d67f6196de821fa5c681ae2362))
+
 ## v19.2.0 (2025-04-15)
 
 ### Features

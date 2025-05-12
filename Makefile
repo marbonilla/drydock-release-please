@@ -12,7 +12,6 @@ release: ## release a new version
 
 release-only:
 	@echo "Releasing: tag, changelog and publish, but no commits."
-	semantic-release version tag
 	semantic-release publish
 
 local-release:

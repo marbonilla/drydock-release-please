@@ -37,11 +37,6 @@ jobs:
         git tag v${{ steps.get_version.outputs.version }}
         git push origin v${{ steps.get_version.outputs.version }}
 
-    - name: Run Semantic Release
-      run: make release-only
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Build package
       run: |
         python -m build --sdist --wheel --outdir dist/ .

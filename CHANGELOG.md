@@ -1,5 +1,31 @@
 # CHANGELOG
 
+
+## v19.4.0 (2025-05-12)
+
+### Chores
+
+- **main**: Release 19.2.1
+  ([`58c7681`](https://github.com/marbonilla/drydock-release-please/commit/58c768145af459ca98308e79096ae3f7d1dc213b))
+
+- **release**: Add tag
+  ([`75b8f59`](https://github.com/marbonilla/drydock-release-please/commit/75b8f59a2190e720fafc829bb1fcba13827904a9))
+
+- **release**: Add tag
+  ([`06dd869`](https://github.com/marbonilla/drydock-release-please/commit/06dd869ba547f5bf5f3305ab901995af1783ff14))
+
+- **release**: Add tag
+  ([`cc199a2`](https://github.com/marbonilla/drydock-release-please/commit/cc199a29327f1a96b4cee9e9d5240102c9d0681f))
+
+- **release**: Create tag
+  ([`5cccdf5`](https://github.com/marbonilla/drydock-release-please/commit/5cccdf59a89fa1fa5a14303142d72884c37c79c7))
+
+### Features
+
+- Test generate new release
+  ([`868c8e9`](https://github.com/marbonilla/drydock-release-please/commit/868c8e968b9a09e53ad8557feac4c927d3d818f9))
+
+
 ## v19.3.0 (2025-05-12)
 
 ### Bug Fixes
@@ -11,6 +37,7 @@
 
 - Update flow
   ([`da3c670`](https://github.com/marbonilla/drydock-release-please/commit/da3c67025849ac3970c3220b98d2765728efb36c))
+
 
 ## v19.2.0 (2025-04-15)
 

@@ -1,5 +1,10 @@
 .DEFAULT_GOAL := help
 
+install: ## install the dependencies
+	@echo "Installing dependencies."
+	@echo "Installing semantic-release."
+	pip install python-semantic-release
+
 release: ## release a new version
 	@echo "Releasing a new version."
 	@echo "This is a remote release, it will push to the remote repository."
@@ -7,7 +12,8 @@ release: ## release a new version
 
 release-only:
 	@echo "Releasing: tag, changelog and publish, but no commits."
-	semantic-release publish --tag --changelog
+	semantic-release version tag
+	semantic-release publish
 
 local-release:
 	@echo "Releasing a new version."

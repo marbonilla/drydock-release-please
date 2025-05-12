@@ -3,7 +3,7 @@
 install: ## install the dependencies
 	@echo "Installing dependencies."
 	@echo "Installing semantic-release."
-	pip install python-semantic-release
+	pip install -e .[dev]
 
 local-release:
 	@echo "Releasing a new version."

@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v19.5.0 (2025-05-12)
+
+### Features
+
+- Move to makefile
+  ([`f48714b`](https://github.com/marbonilla/drydock-release-please/commit/f48714bcda4716f976196ddf0cffd8e74d2b68d3))
+
+
 ## v19.4.0 (2025-05-12)
 
 ### Chores

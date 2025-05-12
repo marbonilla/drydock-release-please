@@ -5,15 +5,6 @@ install: ## install the dependencies
 	@echo "Installing semantic-release."
 	pip install python-semantic-release
 
-release: ## release a new version
-	@echo "Releasing a new version."
-	@echo "This is a remote release, it will push to the remote repository."
-	semantic-release --strict version --changelog --push --tag --commit
-
-release-only:
-	@echo "Releasing: tag, changelog and publish, but no commits."
-	semantic-release publish
-
 local-release:
 	@echo "Releasing a new version."
 	@echo "This is a local release, it will not push to the remote repository."
@@ -22,10 +13,17 @@ local-release:
 
 bump:
 	@echo "Bumping version locally with changelog."
-	semantic-release version --changelog --commit --no-push
+	local-release
 	NEW_VERSION=$$(python -c "import drydock.__about__ as a; print(a.__version__)") && \
 	git checkout -b release/v$$NEW_VERSION && \
-	git push origin release/v$$NEW_VERSION
+	git push origin release/v$$NEW_VERSION && \
+
+release-only:
+	@echo "Push new tag"
+	git config user.name "github-actions[bot]" && \
+	git config user.email "github-actions[bot]@users.noreply.github.com" && \
+	git tag v$$NEW_VERSION && \
+	git push origin v$$NEW_VERSION
 
 selfcheck: ## check that the Makefile is well-formed
 	@echo "The Makefile is well-formed."

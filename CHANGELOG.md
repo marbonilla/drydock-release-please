@@ -1,6 +1,5 @@
 # CHANGELOG
 
-
 ## v19.3.0 (2025-05-12)
 
 ### Bug Fixes
@@ -12,7 +11,6 @@
 
 - Update flow
   ([`da3c670`](https://github.com/marbonilla/drydock-release-please/commit/da3c67025849ac3970c3220b98d2765728efb36c))
-
 
 ## v19.2.0 (2025-04-15)
 

@@ -13,13 +13,14 @@ local-release:
 
 bump:
 	@echo "Bumping version locally with changelog."
-	local-release
+	$(MAKE) local-release
 	NEW_VERSION=$$(python -c "import drydock.__about__ as a; print(a.__version__)") && \
 	git checkout -b release/v$$NEW_VERSION && \
-	git push origin release/v$$NEW_VERSION && \
+	git push origin release/v$$NEW_VERSION
 
 release-only:
-	@echo "Push new tag"
+	@echo "Releasing a new version."
+	NEW_VERSION=$$(python -c "import drydock.__about__ as a; print(a.__version__)") && \
 	git config user.name "github-actions[bot]" && \
 	git config user.email "github-actions[bot]@users.noreply.github.com" && \
 	git tag v$$NEW_VERSION && \
